@@ -1,13 +1,13 @@
 import { useState } from "react"
 import { useDispatch } from "react-redux"
-import { filterByName } from "../features/cart/cartSlice"
+import { filterProduct } from "../features/productlist/productSlice"
 
 const Filter = () => {
     let [search, setSearch] = useState('')
     const dispatch = useDispatch()
 
     const handleOnChange = () => {
-        dispatch(filterByName(search))
+        dispatch(filterProduct(search))
     }
 
     return (

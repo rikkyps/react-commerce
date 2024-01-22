@@ -23,15 +23,10 @@ export const cartSlice = createSlice({
                 })
             }
         },
-
-        filterByName: (state, action) => {
-            const filter = action.payload
-            state.items.filter((item) => item.title === filter);
-        }
     }
 })
 
-export const { addItemToCart, filterByName } = cartSlice.actions
+export const { addItemToCart } = cartSlice.actions
 
 export default cartSlice
 
